@@ -44,7 +44,7 @@ def report():
 def check_resource(order_ingredients):
     # checks enough resources exist for drink
     for item in order_ingredients:
-        if order_ingredients[item] > resources[item]:
+        if order_ingredients[item] >= resources[item]:
             print(f"Sorry, there is not enough {item}.")
             return False
     return True
